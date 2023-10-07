@@ -5,10 +5,8 @@ NDOF is a newline delimited objects format that supports the seamless streaming 
 
 ## About the Project
 
-Welcome to NDOF - Newline Delimited Objects Format
-
-NDOF is a revolutionary data format that supports the seamless streaming of JSON, XML, and other newline delimited objects. 
-Our innovative solution allows for writing, reading, and searching separated formats like JSON, XML, and others in each line without the need for decoding.
+Newline Delimited Objects Format supports the seamless streaming of JSON, XML, and other newline delimited objects in a single file.
+Our innovative solution allows for writing, reading, and searching separated formats like JSON, XML, and others in each line without the need for parsing and decoding whole file or object.
 
 
     

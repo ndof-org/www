@@ -132,6 +132,17 @@ Text editing programs call the first line of a text file "line 1". The first val
 + JSONL
 + NDJSON
 + Newline-Delimited XML    
++ Delimiter separated values
++ Delimiterless
++ delimeter free
++ Stream Object Format
++ StreamSweep
++ Newline Delimeted Objects File Format
++ Objects Lines File Format
++ Newline Delimeted File
++ NdOff
++ multipart objects
++ multipart
 
 ---
 

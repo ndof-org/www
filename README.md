@@ -47,11 +47,38 @@ Dopiero na poziomie przeczytania formatu dochodzi do detekcji formatu danych, z 
 
 
 
-# Separators Delimeter
+
+
+The JSON Lines format has three requirements:
+
+### UTF-8 Encoding
+
+NDOF allows encoding Unicode strings with only ASCII escape sequences, however those escapes will be hard to read when viewed in a text editor. 
+The author of the NDOF Lines file may choose to escape characters to work with plain ASCII files.
+
+Encodings other than UTF-8 are very unlikely to be valid when decoded as UTF-8 so the chance of accidentally misinterpreting characters in NDOF Lines files is low.
+
+
+### Values
+
+Each Line is a Valid NDOF Value
+The most common values will be objects or arrays, but any JSON, XML, serialized value is permitted.
+
+
+
+### Separators Delimeter
+
+Line Separator is '\n'
+
+This means '\r\n' is also supported because surrounding white space is implicitly ignored when parsing NDOF values.
+
+The last character in the file may be a line separator, and it will be treated the same as if there was no line separator present.
+
 
 Characters - Newline - End of Line ( EOL ) - Line Separators - Line Break
 
-## OS
+### OS
+
 To mark line endings in text files, the following characters are used:
 
 + Unix/Linux file systems use newlines (**\n**).
@@ -61,3 +88,22 @@ To mark line endings in text files, the following characters are used:
 The line separator used by the in-memory representation of file contents is always the newline character. When a file is being loaded, the line separator used in the file on disk is stored in a per-buffer property, and all line-endings are converted to newline characters for the in-memory representation. When the buffer is consequently saved, the value of the property replaces newline characters when the buffer is saved to disk. 
 
 
+
+### Suggested Conventions
+
+NDOF Lines files may be saved with the file extension .ndof.
+
+Stream compressors like gzip or bzip2 are recommended for saving space, resulting in .ndof.gz or .ndof.bz2 files.
+
+MIME type may be application/ndof, but this is not yet standardized; any help writing the RFC would be greatly appreciated (see issue).
+
+Text editing programs call the first line of a text file "line 1". The first value in a NDOF Lines file should also be called "value 1". 
+
+
+
+
+
+---
+
++ [edit](https://github.com/ndof-org/www/edit/main/README.md)
+  

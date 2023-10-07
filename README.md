@@ -25,11 +25,25 @@ To start using NDOF in your projects, download our open-source library from the 
 
 
 Powstaje coraz więcej oprogramowania, mamy coraz więcej wyspecjalizowanych bibliotek, języków programowania, DSL.
-Naturalnym rezultatem jest modularyzacja orpogramowania, atomizacja logiki do poziomu funkcji i zmiany struktury danych do pojedynczych tabel z tysiącami, milionami wierszy
 
+
+### Modularyzacja
+Naturalnym rezultatem jest modularyzacja orpogramowania, atomizacja logiki do poziomu funkcji i zmiany struktury danych do pojedynczych tabel z tysiącami, milionami wierszy
 W celu wykorzystania potencjalu leżącego w modularyzacji konieczne są specjalizowane funkcje i formaty danych. Jedno z możliwości to wykorzystanie format pliku: multipart 
 format NDOF jest w tej sytuacji mniej kosztowny przy odczycie i zapisie.
 
+### Struktura
+Utrzymanie struktury w formatach baz danych czy plikach w systemie operacyjnym i usługach wirtualizacji kosztuje,
+w przypadku dysków NVME z prędkościami przekraczającymi możliwości sieci, mamy zdolność do dostępu do danych bez potrzeby ich przetwarzania, cache-owania, bezpośrednio ze źródła.
+W takiej sytuacji koszt pozyskania danych w przypadku usług sieciowych jest zerowy w momencie gdy dane nie są potrzebne, Cache jest kosztem, niezależnie od tego czy dane są potrzebne, bo są one przechowywane w pamięci operacyjnej.
+
+### Korzyśći
+w przypadku rozwiązań JSONL, NDJSON mamy do czynienia z plikiem przeznaczonym do jednego typu formatu danych na plik.
+NDOF zdejmuje to ograniczenie z pliku i pozwala przechowywać inne formaty jak XML, JSON, CSV, a nawet kod programu (tekst funkcji, serialized objects) pod warunkiem, że separatory wewnątrz obiektu nie zawierają znaku końca linii EOL 
+
+### Format danych w jednej linii
+Dozwolone jest przechowywanie każdego formatu danych w odseparowanych liniach znakiem EOL, kwestią drugorzędną pozostaje format tych danych.
+Dopiero na poziomie przeczytania formatu dochodzi do detekcji formatu danych, z racji tego, że każdy sensowny zapis będzie w minimalnej formie odzwierciedlał zapis konkretnego formatu, można przyjąć, że format ten nie wymaga opisu, dodatkowego parametru, top pozwala w przyszłości na utworzenie dodatkowych informacji, jeśli było by to konieczne, np. co druga linia, poprzedzająca linię danych zawierałałaby meta dane takie jak format pliku.
 
 
 

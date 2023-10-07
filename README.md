@@ -1,21 +1,17 @@
 # [NDOF - Newline Delimited Objects Format - www.ndof.org](http://www.ndof.org)
 
-NDOF - Newline Delimited Objects Format
+NDOF is a newline delimited objects format that supports the seamless streaming of JSON, XML and other data formats
 
-+ StreamLine
-+ MultiObjects
-+ JSONL
-+ NDJSON
-+ Newline-Delimited XML
-
-Welcome to NDOF (Newline Delimited Objects Format)
 
 ## About the Project
+
+Welcome to NDOF - Newline Delimited Objects Format
 
 NDOF is a revolutionary data format that supports the seamless streaming of JSON, XML, and other newline delimited objects. 
 Our innovative solution allows for writing, reading, and searching separated formats like JSON, XML, and others in each line without the need for decoding.
 
 
+    
 ## Why NDOF?
 
 With NDOF, you no longer need to worry about the complexities and inefficiencies that come with the traditional approaches to handling streaming data formats. Our easy-to-use and flexible approach make streaming data easier and faster than ever.
@@ -119,8 +115,26 @@ Text editing programs call the first line of a text file "line 1". The first val
 
 
 
+---
+
+## keywords: 
+
++ NDOF
++ Newline Delimited
++ Data Format
++ JSON
++ XML
++ Streaming Data
++ Data Objects
++ File Format
++ StreamLine
++ MultiObjects
++ JSONL
++ NDJSON
++ Newline-Delimited XML    
 
 ---
 
 + [edit](https://github.com/ndof-org/www/edit/main/README.md)
   
+

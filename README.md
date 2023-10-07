@@ -46,10 +46,27 @@ Dozwolone jest przechowywanie każdego formatu danych w odseparowanych liniach z
 Dopiero na poziomie przeczytania formatu dochodzi do detekcji formatu danych, z racji tego, że każdy sensowny zapis będzie w minimalnej formie odzwierciedlał zapis konkretnego formatu, można przyjąć, że format ten nie wymaga opisu, dodatkowego parametru, top pozwala w przyszłości na utworzenie dodatkowych informacji, jeśli było by to konieczne, np. co druga linia, poprzedzająca linię danych zawierałałaby meta dane takie jak format pliku.
 
 
+### Alternatywa dla baz danych
+
+Koszt utrzymania bazy danych zwiększa się wraz z jej obiętością,
+poza tym konieczne są drivery, w świecie streamowania danych, gdzie dostępd o pojedynczych rekordów wymaga osbługi zaawansowanych zapytań kosztuje niewspółmiernie do korzyści.
+
+### Przykładowy zasotosowania
+
+Streamowanie danych może odbywac się bezposredni z pliku danych, który można modyfikować a także udostępniać tylko część danych, np 2 linijki 102-104 w formacie JSON.
+aby tego dokonać wystarczy udostępnić te dane przez funkcję kontrolującą prawa do odczytu i przeprowadzić konwersję do wybranego formatu.
+
+### Przykłady użycia standardu
+
+NDOF został wykorzystany w zdalnym dostępie poprzez RPC, In distributed computing, a remote procedure call (RPC) is when a computer program causes a procedure (subroutine) to execute in a different address space (commonly on another computer on a shared network), which is written as if it were a normal (local) procedure call, without the programmer explicitly writing the details for the remote interaction. 
+
+apirpc - [www.apirpc.com](https://www.apirpc.com/)
 
 
 
-The JSON Lines format has three requirements:
+### NDOF Requirements
+
+The NDOF Lines format has 5 requirements:
 
 ### UTF-8 Encoding
 
